@@ -22,7 +22,10 @@ variable "container_definitions" {
   type        = string
   description = "A list of valid container definitions provided as a single valid JSON document."
 }
-
+variable "command" {
+  type        = string
+  description = "Command to define in task definition"
+}
 variable "is_enabled" {
   default     = true
   type        = string
