@@ -26,6 +26,12 @@ variable "command" {
   type        = string
   description = "Command to define in task definition"
 }
+
+variable "log_group" {
+  type        = string
+  description = "Command to define in task definition"
+}
+
 variable "is_enabled" {
   default     = true
   type        = string
