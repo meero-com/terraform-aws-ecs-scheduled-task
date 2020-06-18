@@ -29,7 +29,7 @@ resource "aws_cloudwatch_event_target" "default" {
   # Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task.
   # https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_EcsParameters.html
   ecs_target {
-    launch_type         = "FARGATE"
+    launch_type         = "EC2"
     task_count          = var.task_count
     task_definition_arn = aws_ecs_task_definition.default[0].arn
 
