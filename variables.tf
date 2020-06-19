@@ -34,9 +34,9 @@ variable "log_group" {
 
 variable "execution_role_arn" {
   type        = string
-  description = "
-  Command to define in task definition"
+  description = "Command to define in task definition"
 }
+
 variable "is_enabled" {
   default     = true
   type        = string
