@@ -139,3 +139,7 @@ variable "ecs_task_execution_role_arn" {
   type        = string
   description = "The ARN of the ECS Task Execution IAM Role."
 }
+
+variable "image_tag" {
+  default = ""
+}
