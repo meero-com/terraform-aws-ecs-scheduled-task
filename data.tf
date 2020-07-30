@@ -1,7 +1,8 @@
 data "template_file" "ecs_scheduled_service" {
-  template = var.container_definitions
-  vars = {
-    command = var.command
+  template    = var.container_definitions
+  vars        = {
+    command   = var.command
     log_group = var.name
+    image_tag = var.image_tag
   }
 }
