@@ -22,6 +22,15 @@ variable "container_definitions" {
   type        = string
   description = "A list of valid container definitions provided as a single valid JSON document."
 }
+variable "command" {
+  type        = string
+  description = "Command to define in task definition"
+}
+
+variable "log_group" {
+  type        = string
+  description = "Command to define in task definition"
+}
 
 variable "is_enabled" {
   default     = true
@@ -113,12 +122,6 @@ variable "create_ecs_task_execution_role" {
   description = "Specify true to indicate that ECS Task Execution IAM Role creation."
 }
 
-variable "ecs_task_execution_role_arn" {
-  default     = ""
-  type        = string
-  description = "The ARN of the ECS Task Execution IAM Role."
-}
-
 variable "create_ecs_task_role" {
   default     = true
   type        = string
@@ -129,4 +132,14 @@ variable "ecs_task_role_arn" {
   default     = ""
   type        = string
   description = "The ARN of the ECS Task IAM Role."
+}
+
+variable "ecs_task_execution_role_arn" {
+  default     = ""
+  type        = string
+  description = "The ARN of the ECS Task Execution IAM Role."
+}
+
+variable "image_tag" {
+  default = ""
 }
